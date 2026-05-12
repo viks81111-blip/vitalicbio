@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viksa Landing Page</title>
+    <title>Barcelona Fan Page</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,8 +12,8 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            color: #17221d;
-            background: #f7f4ef;
+            color: #ffffff;
+            background: #080020;
         }
 
         .hero {
@@ -22,8 +22,8 @@
             place-items: center;
             padding: 24px;
             background:
-                linear-gradient(90deg, rgba(8, 24, 20, 0.78), rgba(8, 24, 20, 0.34)),
-                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80") center/cover;
+                linear-gradient(90deg, rgba(8, 0, 32, 0.92), rgba(112, 0, 42, 0.68), rgba(0, 43, 122, 0.48)),
+                url("https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=1800&q=80") center/cover;
         }
 
         .hero-content {
@@ -40,9 +40,25 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-size: 1.25rem;
             font-weight: 700;
-            letter-spacing: 0.04em;
+            letter-spacing: 0;
+        }
+
+        .crest {
+            display: inline-grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            color: #181000;
+            background: #f7c600;
+            font-size: 0.8rem;
+            font-weight: 900;
+            box-shadow: inset 0 0 0 5px #004d98, inset 0 0 0 9px #a50044;
         }
 
         .nav-links {
@@ -55,7 +71,7 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
-            opacity: 0.9;
+            opacity: 0.92;
         }
 
         .intro {
@@ -65,7 +81,7 @@
         .eyebrow {
             margin: 0 0 14px;
             font-weight: 700;
-            color: #aee6c8;
+            color: #f7c600;
             text-transform: uppercase;
             font-size: 0.82rem;
             letter-spacing: 0.12em;
@@ -81,7 +97,7 @@
         .intro p {
             max-width: 560px;
             margin: 24px 0 34px;
-            color: #eef7f1;
+            color: #f5edf2;
             font-size: clamp(1.05rem, 2vw, 1.3rem);
             line-height: 1.6;
         }
@@ -104,8 +120,8 @@
         }
 
         .button.primary {
-            color: #10221b;
-            background: #aee6c8;
+            color: #160018;
+            background: #f7c600;
         }
 
         .button.secondary {
@@ -124,9 +140,19 @@
             min-height: 132px;
             padding: 20px;
             border-radius: 8px;
-            background: rgba(255, 255, 255, 0.13);
+            background: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature::before {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 4px;
+            margin-bottom: 16px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #004d98 0 50%, #a50044 50% 100%);
         }
 
         .feature strong {
@@ -136,7 +162,7 @@
         }
 
         .feature span {
-            color: #e5efe9;
+            color: #f3e8ef;
             line-height: 1.5;
         }
 
@@ -165,39 +191,39 @@
     <main class="hero">
         <section class="hero-content" aria-label="Welcome">
             <nav>
-                <div class="logo">Viksa</div>
+                <div class="logo"><span class="crest">BCN</span> Barcelona Fans</div>
                 <div class="nav-links" aria-label="Main navigation">
-                    <a href="#">Work</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
+                    <a href="#">News</a>
+                    <a href="#">Matches</a>
+                    <a href="#">Join Us</a>
                 </div>
             </nav>
 
             <div class="intro">
-                <p class="eyebrow">Modern digital studio</p>
-                <h1>Build a sharper first impression.</h1>
+                <p class="eyebrow">Forca Barca</p>
+                <h1>Feel every match like you are at Camp Nou.</h1>
                 <p>
-                    Viksa helps small teams turn ideas into clean, useful web experiences
-                    that feel simple from the very first click.
+                    A home for Barcelona fans to follow match nights, celebrate goals,
+                    share opinions, and keep the blaugrana spirit loud.
                 </p>
                 <div class="actions">
-                    <a class="button primary" href="#">Start a Project</a>
-                    <a class="button secondary" href="#">View Work</a>
+                    <a class="button primary" href="#">Join Fan Club</a>
+                    <a class="button secondary" href="#">Next Match</a>
                 </div>
             </div>
 
             <div class="features" aria-label="Highlights">
                 <div class="feature">
-                    <strong>Clear Message</strong>
-                    <span>Visitors instantly understand who you are and what to do next.</span>
+                    <strong>Matchday Hub</strong>
+                    <span>Fixtures, score talk, and quick reactions in one easy place.</span>
                 </div>
                 <div class="feature">
-                    <strong>Visual Trust</strong>
-                    <span>A full-screen image adds polish without making the page feel busy.</span>
+                    <strong>Fan Community</strong>
+                    <span>Connect with supporters who live every pass, save, and goal.</span>
                 </div>
                 <div class="feature">
-                    <strong>Easy Actions</strong>
-                    <span>Primary and secondary buttons guide people into the next step.</span>
+                    <strong>Club Colors</strong>
+                    <span>Blue, garnet, and gold bring the page closer to Barca energy.</span>
                 </div>
             </div>
         </section>
